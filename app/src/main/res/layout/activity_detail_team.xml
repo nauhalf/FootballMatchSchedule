@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.detailteam.DetailTeamActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar"
+                    app:layout_scrollFlags="enterAlways" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/common_padding"
+                    android:paddingBottom="@dimen/common_padding">
+                    <ImageView
+                        android:id="@+id/img_team_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_team_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Barcelona"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_formed_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="1899"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:id="@+id/txt_stadium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Camp Nou"
+                        android:textColor="@color/colorWhite"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/colorWhite"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabTextColor="@color/colorWhite"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.viewpager.widget.ViewPager>
+        <!--<include android:id="@+id/toolbar"-->
+        <!--layout="@layout/toolbar"-->
+        <!--app:layout_scrollFlags="scroll|enterAlways"/>-->
+
+        <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/tab_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:tabIndicatorColor="@color/colorWhite"-->
+        <!--app:tabTextColor="@color/colorWhite"-->
+        <!--app:tabSelectedTextColor="@color/colorWhite" />-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

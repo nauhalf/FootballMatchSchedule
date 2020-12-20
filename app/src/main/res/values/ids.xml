@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txt_home_team" type="id" />
+    <item name="txt_schedule_date" type="id" />
+    <item name="txt_away_team" type="id" />
+    <item name="txt_home_score" type="id" />
+    <item name="txt_away_score" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="swipe" type="id" />
+    <item name="toolbar" type="id"/>
+    <item name="view_pager" type="id" />
+    <item name="root_constraint" type="id" />
+    <item name="txt_schedule_time" type="id" />
+    <item name="img_team_logo" type="id" />
+    <item name="txt_team_name" type="id" />
+    <item name="img_player" type="id" />
+    <item name="txt_player_name" type="id" />
+    <item name="img_view_player_detail" type="id" />
+    <item name="card_item" type="id" />
+    <item name="txt_player_position" type="id" />
+    <item name="img_view_detail" type="id" />
+</resources>

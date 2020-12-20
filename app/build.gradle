@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.dicoding.naufal.footballmatchschedule"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        buildConfigField "String", "BASE_URL", "\"https://www.thesportsdb.com/\""
+        buildConfigField "String", "TSDB_API_KEY", "\"1\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.1.0'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.0'
+
+    androidTestImplementation('androidx.test.espresso:espresso-contrib:3.1.0') {
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+
+
+    implementation 'com.google.android.material:material:1.2.1'
+
+    //anko
+    implementation "org.jetbrains.anko:anko:$anko_version"
+    implementation "org.jetbrains.anko:anko-design:$anko_version"
+
+    // RecyclerView-v7
+    implementation "org.jetbrains.anko:anko-recyclerview-v7:$anko_version"
+    implementation "org.jetbrains.anko:anko-recyclerview-v7-coroutines:$anko_version"
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.0"
+
+    testImplementation 'org.mockito:mockito-core:2.23.0'
+    testImplementation "org.mockito:mockito-inline:2.23.0"
+    implementation "org.jetbrains.anko:anko-constraint-layout:$anko_version"
+    implementation "org.jetbrains.anko:anko-cardview-v7:$anko_version"
+}

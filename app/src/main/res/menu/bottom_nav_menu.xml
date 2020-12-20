@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/matchs_menu"
+        android:title="@string/matches"
+        android:icon="@drawable/ic_thropy_black"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/teams_menu"
+        android:title="@string/teams"
+        android:icon="@drawable/ic_teams"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/favorites_menu"
+        android:title="@string/fav_match"
+        android:icon="@drawable/ic_stars_black"
+        app:showAsAction="ifRoom"/>
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_padding">14dp</dimen>
+    <dimen name="logo_margin">20dp</dimen>
+    <dimen name="common_padding">10dp</dimen>
+    <dimen name="team_badge">75dp</dimen>
+    <dimen name="txt_detail_size">15sp</dimen>
+    <dimen name="txt_team_name_size">16sp</dimen>
+    <dimen name="txt_measurement_size">20sp</dimen>
+    <dimen name="txt_measurement_number_size">30sp</dimen>
+</resources>
